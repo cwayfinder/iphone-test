@@ -1,0 +1,51 @@
+body {
+    position: relative;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.parent-content {
+    background: #e5e5e5;
+    color: #00b3ee;
+}
+
+.ticket {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    transition: 0.3s ease;
+}
+
+.ticket-content {
+    /*margin-top: 50px;*/
+    overflow-y: scroll;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    color: red;
+    background: whitesmoke;
+}
+
+.ticket.expanded {
+    transform: translate(0, 0);
+}
+
+.ticket .trigger {
+    text-align: center;
+    font-size: 32px;
+    height: 50px;
+    background: lime;
+
+}
+
+.ticket:not(.expanded) .trigger {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+}
